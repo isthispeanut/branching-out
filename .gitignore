@@ -1,0 +1,30 @@
+# Dependencies and generated build output
+node_modules/
+dist/
+.vite/
+
+# Environment files and local credentials
+.env
+.env.*
+!.env.example
+.npmrc
+
+# Local logs and temporary files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*.bak
+*~
+
+# Operating system and editor metadata
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Local test and coverage output
+coverage/
+playwright-report/
+test-results/
