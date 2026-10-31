@@ -70,7 +70,7 @@ export default function TriviaGame({
 
     const acceptedAnswer = findAcceptedAnswer(question, response);
     if (!acceptedAnswer) {
-      setAnswerError('That one doesn’t fit this category. Try another answer while there’s still time!');
+      setAnswerError('We don’t have that one on our list yet. Try another answer, your turn is safe!');
       return;
     }
 
@@ -225,7 +225,10 @@ export default function TriviaGame({
                 ref={inputRef}
                 id="trivia-answer"
                 value={response}
-                onChange={(event) => setResponse(event.target.value)}
+                onChange={(event) => {
+                  setResponse(event.target.value);
+                  setAnswerError('');
+                }}
                 placeholder="Type your best guess..."
                 autoComplete="off"
                 maxLength={100}
